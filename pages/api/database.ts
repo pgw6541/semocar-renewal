@@ -15,7 +15,7 @@ async function run() {
   try {
     await connectDB.connect();
     await connectDB.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    console.log("MongoDB에 성공적으로 연결되었습니다.");
   } finally {
     await connectDB.close();
   }

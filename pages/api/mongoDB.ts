@@ -22,4 +22,4 @@ async function run() {
 }
 run().catch(console.dir);
 
-export { connectDB };
+export { connectDB }

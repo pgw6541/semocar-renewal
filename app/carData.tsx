@@ -15,7 +15,7 @@ export default function Car() {
         carData.map((car, i)=>(
           <div key={car.id}>
             <h3>{car.name.kr}</h3>
-            <Image
+            <Image 
             src="https://raw.githubusercontent.com/pgw6541/CarSite/main/src/images/hyundai/Casper.png"
             width={350}
             height={200}
@@ -27,4 +27,3 @@ export default function Car() {
     </div>  
   )
 } 
-

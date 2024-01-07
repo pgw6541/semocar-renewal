@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-const { webpack } = require('next/dist/compiled/webpack/webpack')
 
-module.exports = {
+const { webpack } = require('next/dist/compiled/webpack/webpack')
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com"
+      },
+    ],
+  },
   webpack: (config, {dev, isServer}) => {
     if(dev){   
         // 개발 환경 설정
@@ -12,3 +19,5 @@ module.exports = {
     return config
   }
 }
+
+module.exports = nextConfig

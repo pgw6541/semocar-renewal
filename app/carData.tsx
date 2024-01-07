@@ -16,9 +16,9 @@ export default function Car() {
           <div key={car.id}>
             <h3>{car.name.kr}</h3>
             <Image 
-            src="https://raw.githubusercontent.com/pgw6541/CarSite/main/src/images/hyundai/Casper.png"
-            width={350}
-            height={200}
+            src={`https://raw.githubusercontent.com/pgw6541/CarSite/main/src/images/${car.imgUrl}.png`}
+            width={360}
+            height={150}
             alt={car.name.en}
             />
           </div>

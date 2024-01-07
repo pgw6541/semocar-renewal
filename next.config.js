@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 const { webpack } = require('next/dist/compiled/webpack/webpack')
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "raw.githubusercontent.com"
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/pgw6541/**",
       },
     ],
   },

@@ -1,10 +1,10 @@
-import { connectDB } from "@/pages/api/database"
+import Car from './carData'
 
-export default async function Home() {
+export default function Home() {
 
   return (
     <div>
-      <h4>Home</h4>
+      <Car />
     </div>
   )
 }

@@ -1,11 +1,9 @@
-import { useCarData } from "@/hook/useData"
+// COMPONENTS
+import Category from "./category"
 
-export default function Category() {
-
+export default function Search() {
 
   return (
-    <div>
-      
-    </div>
+    <Category />
   )
 }

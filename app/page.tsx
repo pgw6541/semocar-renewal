@@ -1,4 +1,4 @@
-import Car from './components/carView/carData'
+import Car from '../components/carView/carData'
 
 export default function Home() {
 

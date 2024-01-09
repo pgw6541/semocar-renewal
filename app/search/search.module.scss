@@ -1,6 +1,18 @@
 .container {
   padding: 24px;
 }
+// 모달 Modal
+.modal {
+  width: 90%;
+  height: 85vh;
+  background-color: bisque;
+  position: fixed;
+  z-index: 5;
+  overflow: auto;
+  .modal_content {
+    
+  }
+}
 
 // 검색창
 .searchBar {

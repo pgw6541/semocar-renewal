@@ -1,6 +1,5 @@
 'use client'
 
-import React from "react";
 import search from "./search.module.scss"
 
 type ModalProps = {
@@ -9,7 +8,7 @@ type ModalProps = {
   children: React.ReactNode;
 }
 
-const Modal: React.FC<ModalProps> = ({show, onClose, children}) => {
+export default function Modal({show, onClose, children}: ModalProps){
   // false값이 들어오면 null값을 리턴
   if(!show){
     return null
@@ -24,5 +23,3 @@ const Modal: React.FC<ModalProps> = ({show, onClose, children}) => {
     </div>
   )
 }
-
-export default Modal;

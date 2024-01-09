@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
+import { Providers } from '@/redux/provider'
 
 import Footer from '../components/footer/footer'
 import Nav from '../components/nav/nav'
@@ -12,17 +13,17 @@ export const metadata: Metadata = {
   description: '이름 뭐로할까..',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="kr" className='container'>
       <body className={inter.className}>
-        {children}
-        <Footer />
-        <Nav />
+        <Providers>
+
+          {children}
+          <Footer />
+          <Nav />
+          
+        </Providers>
       </body>
     </html>
   )

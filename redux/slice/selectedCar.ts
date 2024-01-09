@@ -2,24 +2,31 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Car } from '@/types/types';
 
 interface SelectedCarState {
-  value: Car | null
+  brand: string;
+  segment: string;
+  fuelType: string;
 }
 
 const initialState: SelectedCarState = {
-  value: null,
+  brand: '',
+  segment: '',
+  fuelType: '',
 }
 
-export const selectedCarSlice = createSlice({
+export const selectedCar = createSlice({
   name: 'selectedCar',
   initialState,
   reducers: {
-    // 차량 선택 액션
-    selectCar: (state, action: PayloadAction<Car>) => {
-      state.value = action.payload;
+    setBrand: (state, action: PayloadAction<string>) => {
+      state.brand = action.payload;
     },
-    // 차량 선택 해제 액션
-    deselectCar: (state) => {
-      state.value = null;
+    setSegment: (state, action: PayloadAction<string>) => {
+      state.segment = action.payload;
     },
+    setFuelType: (state, action: PayloadAction<string>) => {
+      state.fuelType = action.payload;
+    }, 
   },
 });
+
+export const { setBrand, setSegment, setFuelType } = selectedCar.actions;

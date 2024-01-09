@@ -24,3 +24,5 @@ const Modal: React.FC<ModalProps> = ({show, onClose, children}) => {
     </div>
   )
 }
+
+export default Modal;
